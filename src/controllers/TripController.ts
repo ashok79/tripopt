@@ -13,6 +13,7 @@ const addTrip = async (req: Request, res: Response, next: NextFunction) => {
 const getTrips = async (req: Request, res: Response, next: NextFunction) => {
   const trp = new TripService();
   trp.getTrips().then((trips) => {
+    
     res.send(trips);
   });
 };
