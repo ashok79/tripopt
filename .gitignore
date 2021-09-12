@@ -1,9 +1,0 @@
-node_modules
-src
-dist/*
-dist/src
-!dist/src/
-.vscode
-package-lock.json
-package.json
-tsconfig.json
