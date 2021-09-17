@@ -3,9 +3,7 @@ import { Db, MongoClient } from "mongodb";
 import Trip from "../model/Trip";
 
 class TripService {
-  uri: string =
-    "mongodb+srv://nodeapp:Ndxqm2vfVMa0xxoc@cluster0.czphu.mongodb.net/tripdb?retryWrites=true&w=majority";
-
+  uri: string = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/tripdb?retryWrites=true&w=majority`;
   async addTrip(newtrip: Trip): Promise<string> {
     const client = new MongoClient(this.uri);
     await client.connect();
